@@ -1,12 +1,107 @@
 
-/* 
 
-    You can write your own styles here...
+body {
+    margin-top: 100px;
+    background-color: rgb(244, 245, 243);
+}
+h1 {
+    font-weight: lighter;
+    color: rgb(170, 130, 172);
+    text-align: center;
+    margin: 25px;
+}
+li{
+    font-weight: lighter;
+    width: 60%;
+    color: rgb(131, 131, 131);
     
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+}
+input {
+    border: none;
+    width: 100%;
+    font-weight: lighter;
+    color: rgb(131, 131, 131);
+    place-content: center;
 
-*/
+
+}
+.deleteText {
+    color: red;
+    font-weight: lighter;
+    cursor: pointer;
+    
+}
+.editText {
+    color: gray;
+    font-size: smaller;
+    font-weight: lighter;
+}
+
+
+
+  .list-group-item {
+    display: flex;
+    align-items: center;
+    padding: 10px; 
+ word-break: break-word; 
+  }
+  
+  .todo-text {
+    flex: 1; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+  }
+  
+  .form-control {
+    width: 100%;
+  }
+
+h4 {
+    font-weight: 100;
+    color: gray;
+    font-size: 13px;
+    cursor: pointer;
+}
+i {
+    
+    font-size: 40px;
+    color: red;
+    padding-left: 10px;
+    
+
+}
+.cancel {
+    font-weight: 100;
+    font-size: 12px;
+    color: gray;
+    width: 100px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+
+.list-group {
+    margin: 0 auto; /* Centra horizontalmente la lista */
+    padding: 0; /* Elimina el padding si es necesario */
+    width: 100%; /* Asegúrate de que la lista use el ancho disponible */
+}
+/* Ocultar por defecto los botones */
+.list-group-item .editText,
+.list-group-item .deleteText {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s;
+}
+
+/* Mostrar los botones al hacer hover sobre la tarea */
+.list-group-item:hover .editText,
+.list-group-item:hover .deleteText {
+    visibility: visible;
+    opacity: 1;
+}
